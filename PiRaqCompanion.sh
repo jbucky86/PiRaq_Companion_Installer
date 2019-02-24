@@ -77,7 +77,7 @@ EOF
 
 echo --------------------------------------------PiRaq GPIO 
 cd /home/pi/
-wget https://raw.githubusercontent.com/jbucky86/PiRaq-_Companion_install/master/companionButtons.py
+wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_install/master/companionButtons.py
 
 echo --------------------------------------------pip install python-uinput
 sudo pip install python-uinput 
@@ -94,9 +94,9 @@ uinput
 EOF"
 
 echo --------------------------------------------companion thanks to EPstudios for these 2 scripts
-sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq-_Companion_install/master/install_companion.sh | bash
+sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_install/master/install_companion.sh | bash
 
-sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq-_Companion_install/master/launcher_companion.sh | bash
+sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_install/master/launcher_companion.sh | bash
 
 echo --------------------------------------------echo Done!
 echo --------------------------------------------echo rebooting in 5 seconds
