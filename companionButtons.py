@@ -122,15 +122,15 @@ def on_cen(pin):
     
     if (butl == 0 and butc == 0):
         print('Defalt IP')
-        os.system('sudo ifconfig eth0 192.168.86.35 netmask 255.255.255.0 broadcast 192.168.86.255')
+        os.system('sudo dhclient -r eth0 && sudo dhclient eth0')
         os.system('sudo -u pi /home/pi/companion/headless.js eth0 8000')
-#        os.system('sudo reboot')
+        os.system('sudo reboot')
     
     if (butr == 0 and butc == 0):
         print('DHCP IP')
-        os.system('sudo dhclient -r eth0 && sudo dhclient eth0')
+        os.system('sudo ifconfig eth0 192.168.86.35 netmask 255.255.255.0 broadcast 192.168.86.255')
         os.system('sudo -u pi /home/pi/companion/headless.js eth0 8000')
-#        os.system('sudo reboot')
+        os.system('sudo reboot')
     
     if (butu == 0 and butc == 0):
         print('Reseved butn1')
