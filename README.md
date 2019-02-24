@@ -5,7 +5,7 @@ use PiRaq image https://drive.google.com/open?id=1afkOQGkFdZRpDQW7yNO8YGyvY-oKon
 
 ssh into pi and run 
 
-curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_install/master/PiRaqCompanion.sh | bash
+curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/PiRaqCompanion.sh | bash
 
 it will take a while but thats should take care of everthing
 
