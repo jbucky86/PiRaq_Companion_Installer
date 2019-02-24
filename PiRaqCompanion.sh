@@ -4,11 +4,6 @@ sudo rm -rf /home/pi/sambaShare/AlarmClock
 echo --------------------------------------------sudo apt-get chromium-browser
 sudo apt-get install chromium-browser -y
 
-echo --------------------------------------------splash screen
-cd /home/pi/
-wget https://bitfocus.io/companion/badge.png
-sudo cp ~/badge.png /usr/share/plymouth/themes/pix/splash.png
-
 echo --------------------------------------------install stuff and what ever
 echo --------------------------------------------sudo apt-get purge wolfram-engine scratch scratch2 nuscratch sonic-pi idle3 -y
 sudo apt-get purge wolfram-engine scratch scratch2 nuscratch sonic-pi idle3 -y
@@ -36,6 +31,11 @@ sudo raspi-config nonint do_boot_behaviour B4
 sudo raspi-config nonint do_ssh 0
 sudo raspi-config nonint do_expand_rootfs
 sudo raspi-config nonint do_hostname PiRaq_Companion
+
+echo --------------------------------------------splash screen
+cd /home/pi/
+wget https://bitfocus.io/companion/badge.png
+sudo cp ~/badge.png /usr/share/plymouth/themes/pix/splash.png
 
 echo --------------------------------------------chrome kiosk
 sudo /bin/sh -c "cat <<EOF > /home/pi/kiosk.sh
@@ -77,7 +77,7 @@ EOF
 
 echo --------------------------------------------PiRaq GPIO 
 cd /home/pi/
-wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_install/master/companionButtons.py
+wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/companionButtons.py
 
 echo --------------------------------------------pip install python-uinput
 sudo pip install python-uinput 
@@ -94,9 +94,9 @@ uinput
 EOF"
 
 echo --------------------------------------------companion thanks to EPstudios for these 2 scripts
-sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_install/master/install_companion.sh | bash
+sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/install_companion.sh | bash
 
-sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_install/master/launcher_companion.sh | bash
+sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/launcher_companion.sh | bash
 
 echo --------------------------------------------echo Done!
 echo --------------------------------------------echo rebooting in 5 seconds
