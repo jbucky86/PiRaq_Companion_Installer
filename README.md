@@ -27,6 +27,5 @@ hold left and hit center button will set the rpi to DHCP
 
 hold left and right will reboot rpi
 
-up and encorder will zoom the page
 
 The rest is on you 
