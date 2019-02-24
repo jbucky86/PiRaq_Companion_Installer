@@ -3,11 +3,15 @@ script to install companion on RPi 3 with a PiRaq .
 
 use PiRaq image https://drive.google.com/open?id=1afkOQGkFdZRpDQW7yNO8YGyvY-oKoni2
 
-ssh into pi and run 
+connect pi to the internet
+
+ssh into pi or use a keyboad to run 
 
 curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/PiRaqCompanion.sh | bash
 
-it will take a while but thats should take care of everthing
+it will take a while but that should take care of everthing
+
+
 
 The encoder will scroll the webpage
 
