@@ -81,16 +81,44 @@ sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/m
 sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/launcher_companion.sh | bash
 
 echo --------------------------------------------ip address setup
-sudo apt-get install python-pip
-sudo apt-get install dialog
-sudo pip install python2-pythondialog
-sudo git clone https://github.com/dggreenbaum/debinterface /root/.local/lib/python2.7/site-packages/debinterface
-wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/pydialog-interfaces.py
-sudo chmod +x pydialog-interfaces.py
-wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/ipUpdate.sh
-sudo chmod +x ipUpdate.sh
-wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/ipButtons.py
-sudo chmod +x ipButtons.py 
+sudo /bin/sh -c "cat <<EOF > /home/pi/dhcpIP
+hostname
+clientid
+persistent
+option rapid_commit
+option domain_name_servers, domain_name, domain_search, host_name
+option classless_static_routes
+option ntp_servers
+option interface_mtu
+require dhcp_server_identifier
+slaac private
+
+profile static_eth0
+static ip_address=192.168.1.2/24
+static routers=192.168.1.1
+static domain_name_servers=192.168.1.1
+
+interface eth0
+fallback static_eth0
+EOF"
+
+sudo /bin/sh -c "cat <<EOF > /home/pi/staticIP
+hostname
+clientid
+persistent
+option rapid_commit
+option domain_name_servers, domain_name, domain_search, host_name
+option classless_static_routes
+option ntp_servers
+option interface_mtu
+require dhcp_server_identifier
+slaac private
+
+interface eth0
+static ip_address=192.168.86.4/24
+static routers=192.168.86.1
+static domain_name_servers=192.168.86.1 8.8.8.8
+EOF"
 
 echo --------------------------------------------echo Done!
 echo --------------------------------------------echo rebooting in 5 seconds
