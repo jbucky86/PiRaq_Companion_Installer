@@ -43,7 +43,7 @@ GPIO.setup(but_u, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(but_d, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(but_c, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-device = uinput.Device([uinput.KEY_UP, uinput.KEY_DOWN,  uinput.KEY_LEFT,  uinput.KEY_RIGHT,  uinput.KEY_ENTER,  uinput.KEY_0,  uinput.KEY_1,  uinput.KEY_2,  uinput.KEY_3,  uinput.KEY_4,  uinput.KEY_5,  uinput.KEY_6,  uinput.KEY_7,  uinput.KEY_8,  uinput.KEY_9])
+device = uinput.Device([uinput.KEY_UP, uinput.KEY_DOWN,  uinput.KEY_LEFT,  uinput.KEY_RIGHT,  uinput.KEY_ENTER,  uinput.KEY_0,  uinput.KEY_1,  uinput.KEY_2,  uinput.KEY_3,  uinput.KEY_4,  uinput.KEY_5,  uinput.KEY_6,  uinput.KEY_7,  uinput.KEY_8,  uinput.KEY_9,  uinput.KEY_ESC])
 
 seq_a = seq_b = 0
 
@@ -115,6 +115,7 @@ def on_cen(pin):
     butc = GPIO.input(but_c)
     
     if (butl == 0 and butc == 0):
+        device.emit_click(uinput.KEY_ESC)
         print('Reseved butn1')
     
     if (butr == 0 and butc == 0):
