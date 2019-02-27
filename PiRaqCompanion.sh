@@ -82,7 +82,7 @@ sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/m
 
 echo --------------------------------------------ip address setup
 sudo pip install python2-pythondialog
-sudo git clone https://github.com/dggreenbaum/debinterface /root/.local/lib/python2.7/site-packages
+sudo git clone https://github.com/dggreenbaum/debinterface /root/.local/lib/python2.7/site-packages/debinterface
 wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/pydialog-interfaces.py
 sudo chmod +x pydialog-interfaces.py
 wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/ipUpdate.sh
