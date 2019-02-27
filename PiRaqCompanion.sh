@@ -81,6 +81,7 @@ sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/m
 sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/launcher_companion.sh | bash
 
 echo --------------------------------------------ip address setup
+sudo apt-get install python3-pyqt5
 sudo /bin/sh -c "cat <<EOF > /home/pi/dhcpIP
 hostname
 clientid
