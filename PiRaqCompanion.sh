@@ -37,36 +37,16 @@ cd /home/pi/
 wget https://bitfocus.io/companion/badge.png
 sudo cp ~/badge.png /usr/share/plymouth/themes/pix/splash.png
 
-echo --------------------------------------------chrome kiosk
-sudo /bin/sh -c "cat <<EOF > /home/pi/kiosk.sh
-#!/bin/bash
-xset s noblank
-xset s off
-xset -dpms
-
-unclutter -idle 0.5 -root &
-
-sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' /home/pi/.config/chromium/Default/Preferences
-sed -i 's/"exit_type":"Crashed"/"exit_type":"Normal"/' /home/pi/.config/chromium/Default/Preferences
-sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' ~/.config/chromium/'Local State'
-sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/"exit_type":"Normal"/' ~/.config/chromium/Default/Preferences
-
-/usr/bin/chromium-browser --noerrdialogs --disable-infobars --disable-session-crashed-bubble --disable-session-crashed-bubble --force-device-scale-factor=0.28 --kiosk http://127.0.0.1:8000/tablet.html
-
-while true; do
-   xdotool keydown ctrl+r; xdotool keyup ctrl+r;
-   sleep 10
-done
-EOF"
-
 echo --------------------------------------------Make kiosk executable and boot
-sudo chmod u+x /home/pi/kiosk.sh
+cd /home/pi/
+wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/companionKiosk.sh
+sudo chmod u+x /home/pi/companionKiosk.sh
 sudo /bin/sh -c "cat <<EOF > /home/pi/.config/lxsession/LXDE-pi/autostart
 @lxpanel --profile LXDE-pi
 @pcmanfm --desktop --profile LXDE-pi
 #@xscreensaver -no-splash
 @point-rpi
-@bash /home/pi/kiosk.sh
+@bash /home/pi/companionKiosk.sh
 EOF"
 
 echo --------------------------------------------PiRaq touch screen
