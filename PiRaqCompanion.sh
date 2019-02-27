@@ -89,6 +89,8 @@ wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master
 sudo chmod +x pydialog-interfaces.py
 wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/ipUpdate.sh
 sudo chmod +x ipUpdate.sh
+wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/ipButtons.py
+sudo chmod +x ipButtons.py 
 
 echo --------------------------------------------echo Done!
 echo --------------------------------------------echo rebooting in 5 seconds
