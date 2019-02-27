@@ -114,12 +114,12 @@ def on_cen(pin):
     
     if (butl == 0 and butc == 0):
         print('DHCP IP')
-        os.system('sudo cp /home/pi/companionipdhcp /etc/network/interfaces')
+        os.system('sudo cp /home/pi/dhcpIP /etc/dhcpcd.conf')
         os.system('sudo reboot')
     
     if (butr == 0 and butc == 0):
         print('DEFAULT IP')
-        os.system('sudo cp /home/pi/companionipstatic /etc/network/interfaces')
+        os.system('sudo cp /home/pi/staticIP /etc/dhcpcd.conf')
         os.system('sudo reboot')
     
     if (butu == 0 and butc == 0):
