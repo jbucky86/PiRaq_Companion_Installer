@@ -31,6 +31,6 @@ hold left and hit center button will set the rpi to DHCP
 
 hold left and right will reboot rpi
 
-i havent found a way to get it to the size i want by default so youll nee to plug in a keyboard just once and use ctrl - to size it. im atempting to do this via the encordor but everything i try also fails. but i will save after reboot. you only need to do this once
+i havent found a way to get it to the size i want by default so if you hold down and use the encodor it will zoom the screen or youll need to plug in a keyboard and use ctrl - to size it. this only needs to be done once chrome will save the size.
 
 The rest is on you 
