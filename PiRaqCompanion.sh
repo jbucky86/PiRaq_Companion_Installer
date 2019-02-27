@@ -81,28 +81,9 @@ sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/m
 sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/launcher_companion.sh | bash
 
 echo --------------------------------------------ip address setup
-sudo /bin/sh -c "cat <<EOF > /home/pi/companionipstatic
-auto lo
-iface lo inet loopback
-
-auto eth0
-allow-hotplug eth0
-iface eth0 inet static
-address 192.168.86.4
-netmask 255.255.255.0
-network 192.168.86.0
-broadcast 192.168.86.255
-gateway 192.168.86.255
-EOF"
-
-sudo /bin/sh -c "cat <<EOF > /home/pi/companionipdhcp
-auto lo
-iface lo inet loopback
-
-auto eth0
-allow-hotplug eth0
-iface eth0 inet dhcp
-EOF"
+sudo git clone https://github.com/dggreenbaum/debinterface /root/.local/lib/python2.7/site-packages
+wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/pydialog-interfaces.py
+sudo chmod +x pydialog-interfaces.py
 
 echo --------------------------------------------echo Done!
 echo --------------------------------------------echo rebooting in 5 seconds
