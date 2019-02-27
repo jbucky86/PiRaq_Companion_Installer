@@ -31,6 +31,6 @@ hold left and hit center button will set the rpi to DHCP
 
 hold left and right will reboot rpi
 
-i havent found a way to get it to the size i want by default so youll nee to plug in a keyboard just once and use ctrl - to size it. im atempting to do this via the encordor but everything i try also fails.  
+i havent found a way to get it to the size i want by default so youll nee to plug in a keyboard just once and use ctrl - to size it. im atempting to do this via the encordor but everything i try also fails. but i will save after reboot. you only need to do this once
 
 The rest is on you 
