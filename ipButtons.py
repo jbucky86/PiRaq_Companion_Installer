@@ -2,15 +2,7 @@
 import RPi.GPIO as GPIO
 import uinput
 import os
-import socket
 from time import sleep
-
-UDP_IP = "127.0.0.1"
-UDP_PORT = 51235
-MESSAGE_push = "BANK-DOWN 99 12"
-MESSAGE_rel = "BANK-UP 99 12"
-
-sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 rot_a = 22
 rot_b = 24
