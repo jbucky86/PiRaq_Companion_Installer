@@ -31,6 +31,6 @@ hold left and hit center button will set the rpi to DHCP
 
 hold left and right will reboot rpi
 
-i havent found a way to get it to the size i want by default so if you hold down and use the encodor it will zoom the screen or youll need to plug in a keyboard and use ctrl - to size it. this only needs to be done once chrome will save the size.
+i havent found a way to get it to the size i want by default so if you hold down and use the encodor it will zoom the screen or youll need to plug in a keyboard and use ctrl+(-) to size it. this only needs to be done once chrome will save the size.  To have all 12 button from one page on the screen at once set it to 80%
 
 The rest is on you 
