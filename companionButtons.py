@@ -60,10 +60,11 @@ def on_rot(pin):
         device.emit_click(uinput.KEY_DOWN)
     
     if seq_a == 0b0011 and seq_b == 0b1001 and butd == 0:
-        device.emit_click(uinput.KEY_LEFTCTRL, uinput.KEY_KPPLUS)
-                             
+        device.emit_combo([uinput.KEY_LEFTCTRL, uinput.KEY_KPPLUS])
+
     if seq_a == 0b1001 and seq_b == 0b0011 and butd == 0:
-        device.emit_click(uinput.KEY_LEFTCTRL, uinput.KEY_KPMINUS)
+        device.emit_combo([uinput.KEY_LEFTCTRL, uinput.KEY_KPMINUS])
+
 
 def on_but(pin):
     butl = GPIO.input(but_l)
@@ -72,15 +73,12 @@ def on_but(pin):
     butd = GPIO.input(but_d)
     butc = GPIO.input(but_c)
     if (butl == 0):
-        print('Left Button')
-        device.emit_click(uinput.KEY_HOME)
+          device.emit_click(uinput.KEY_HOME)
 
     if (butr == 0):
-        print('Right Button')
-        device.emit_click(uinput.KEY_END)
+          device.emit_click(uinput.KEY_END)
 
     if (butu == 0):
-        print('UP Button')
         device.emit_click(uinput.KEY_UP)
         device.emit_click(uinput.KEY_UP)
         device.emit_click(uinput.KEY_UP)
@@ -93,7 +91,6 @@ def on_but(pin):
         device.emit_click(uinput.KEY_UP)
 
     if (butd == 0):
-        print('DOWN Button')
         device.emit_click(uinput.KEY_DOWN)
         device.emit_click(uinput.KEY_DOWN)
         device.emit_click(uinput.KEY_DOWN)
@@ -106,7 +103,6 @@ def on_but(pin):
         device.emit_click(uinput.KEY_DOWN)
 
     if (butu == 0 and butd == 0):
-        print('REBOOT')
         os.system('sudo reboot')
 
 def on_cen(pin):
