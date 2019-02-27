@@ -69,7 +69,7 @@ def on_rot(pin):
         num = uinput.KEY_8
     if counter == 9:
         num = uinput.KEY_9
-
+    print(counter)
     if seq_a == 0b0011 and seq_b == 0b1001:
         device.emit_click(uinput.KEY_DEL)
         device.emit_click(num)
