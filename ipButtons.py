@@ -46,7 +46,7 @@ def on_rot(pin):
     seq_a = ((seq_a << 1) | a) & 0b1111
     seq_b = ((seq_b << 1) | b) & 0b1111
     if counter == -1:
-        counter == 9
+        counter = 9
     if counter == 10:
         counter = 0
     if counter == 0:
@@ -71,10 +71,12 @@ def on_rot(pin):
         num = uinput.KEY_9
 
     if seq_a == 0b0011 and seq_b == 0b1001:
+        device.emit_click(uinput.KEY_DEL)
         device.emit_click(num)
         counter = counter + 1
     
     if seq_a == 0b1001 and seq_b == 0b0011:
+        device.emit_click(uinput.KEY_DEL)
         device.emit_click(num)
         counter = counter - 1
 
