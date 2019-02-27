@@ -81,6 +81,7 @@ sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/m
 sudo curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/launcher_companion.sh | bash
 
 echo --------------------------------------------ip address setup
+sudo pip install python2-pythondialog
 sudo git clone https://github.com/dggreenbaum/debinterface /root/.local/lib/python2.7/site-packages
 wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/pydialog-interfaces.py
 sudo chmod +x pydialog-interfaces.py
