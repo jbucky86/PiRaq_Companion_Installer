@@ -84,6 +84,8 @@ echo --------------------------------------------ip address setup
 sudo git clone https://github.com/dggreenbaum/debinterface /root/.local/lib/python2.7/site-packages
 wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/pydialog-interfaces.py
 sudo chmod +x pydialog-interfaces.py
+wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master/ipUpdate.sh
+sudo chmod +x ipUpdate.sh
 
 echo --------------------------------------------echo Done!
 echo --------------------------------------------echo rebooting in 5 seconds
