@@ -25,9 +25,9 @@ left will goto top of page
 
 right will goto bottom 
 
-hold right and hit center button will change the Pi Ip addreas to 192.168.86.35 
+hold right and hit center button will change the Pi Ip addreas to 192.168.86.4 
 
-hold left and hit center button will set the rpi to DHCP
+hold left and hit center button will set the rpi to DHCP. if dhcp fails it will revert to 192.168.1.2
 
 hold left and right will reboot rpi
 
