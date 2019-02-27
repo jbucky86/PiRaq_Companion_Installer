@@ -42,7 +42,7 @@ GPIO.setup(but_u, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(but_d, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(but_c, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-device = uinput.Device([uinput.KEY_UP, uinput.KEY_DOWN,  uinput.KEY_HOME,  uinput.KEY_END, uinput.KEY_LEFTCTRL, uinput.KEY_EQUAL, uinput.KEY_MINUS])
+device = uinput.Device([uinput.KEY_UP, uinput.KEY_DOWN,  uinput.KEY_HOME,  uinput.KEY_END, uinput.KEY_LEFTCTRL, uinput.KEY_KPPLUS, uinput.KEY_KPMINUS])
 
 seq_a = seq_b = 0
 
@@ -60,14 +60,10 @@ def on_rot(pin):
         device.emit_click(uinput.KEY_DOWN)
     
     if seq_a == 0b0011 and seq_b == 0b1001 and butd == 0:
-        device.emit_click(uinput.KEY_LEFTCTRL, 1)
-        device.emit_click(uinput.KEY_KPMINUS)
-        device.emit_click(uinput.KEY_LEFTCTRL, 0)
-    
+        device.emit_click(uinput.KEY_LEFTCTRL, uinput.KEY_KPPLUS)
+                             
     if seq_a == 0b1001 and seq_b == 0b0011 and butd == 0:
-        device.emit_click(uinput.KEY_LEFTCTRL, 1)
-        device.emit_click(uinput.KEY_KPMINUS)
-        device.emit_click(uinput.KEY_LEFTCTRL, 0)
+        device.emit_click(uinput.KEY_LEFTCTRL, uinput.KEY_KPMINUS)
 
 def on_but(pin):
     butl = GPIO.input(but_l)
