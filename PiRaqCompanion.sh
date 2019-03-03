@@ -63,6 +63,7 @@ wget https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/master
 
 echo --------------------------------------------pip install python-uinput
 sudo pip install python-uinput 
+sudo pip install pyusb==1.0.0b1
 
 echo --------------------------------------------uinput added to modules
 
