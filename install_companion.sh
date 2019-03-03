@@ -7,7 +7,7 @@ curl -o- -L https://yarnpkg.com/install.sh | bash
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 echo Clone companion
-git clone https://github.com/jbucky86/companion.git
+git clone https://github.com/bitfocus/companion.git
 
 echo Update and build
 cd companion
