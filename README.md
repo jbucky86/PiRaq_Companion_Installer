@@ -7,7 +7,7 @@ connect pi to the internet
 
 ssh into pi or use a keyboad to run 
 
-curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/bucky/PiRaqCompanion.sh| bash
+curl https://raw.githubusercontent.com/jbucky86/PiRaq_Companion_Installer/bucky/PiRaqCompanion.sh | bash
 
 it will take a while but that should take care of everthing
 
